@@ -1,3 +1,0 @@
-/home/pmore/Documents/Robotics/pumasim/1-code_template/1/controlDLL/CMakeFiles/rebuild_cache.dir
-/home/pmore/Documents/Robotics/pumasim/1-code_template/1/controlDLL/CMakeFiles/edit_cache.dir
-/home/pmore/Documents/Robotics/pumasim/1-code_template/1/controlDLL/CMakeFiles/controlDLL.dir

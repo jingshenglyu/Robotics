@@ -67,18 +67,18 @@ void PreprocessControl(GlobalVariables& gv)
          double r1, r2, r3, l1, l2, l3, 
                   m1, m2, m3, g, c1, c12, c123;
 
-        //Compute g123 here!
-			// cumpute the cosine of the angles that we need to compute the gravity vector
-			double c1 = cos(q1);
-			double c12 = cos(q1 + q2 -90*M_PI/180);
-			double c123 = cos(q1 + q2 -90*M_PI/180 + q3);
+         r1 = R2;    r2 = 0.189738;    r3 = R6;
+         l1 = L2;    l2 = L3;          l3 = L6;
+         m1 = M2;    m2 = M3 + M4 + M5;m3 = M6;
+         g = -9.81;
+         c1 = cos(q1);   c12 = -cos(q1 + q2 + 3.14/2);     c123 = -cos(q1 + q2 + 3.14/2 + q3);    
+         // printV("gv.q",gv.q);
+         // printV("c1",c1);
 
-			// compute the gravity vector
-			g123[0] = g*(c1*m1*r1 + m2*(l1*c1 + r2*c12) + m3*(l1*c1 + l2*c12 + r3*c123));
-			g123[1] = g*(m2*r2*c12 + m3*(l2*c12 + r3*c123));
-			g123[2] = g*m3*r3*c123;
+         g123[0] = -(r1*c1*m1 + m2*(l1*c1 + r2*c12) + m3*(l1*c1 + l2*c12 + r3*c123))*g;
+         g123[1] = -(r2*c12*m2 + m3*(l2*c12 + r3*c123))*g;
+         g123[2] = -r3*c123*m3*g;
 
-        //maps the torques to the right joint indices depending on the current mode:
         if (gv.dof == 3) {
             gv.G[0] = g123[0];
             gv.G[1] = g123[1];
@@ -89,7 +89,6 @@ void PreprocessControl(GlobalVariables& gv)
             gv.G[4] = g123[2];
         }
 
-//        printVariable(g123, "g123");
     } else {
         gv.G = PrVector(gv.G.size());
     }   
