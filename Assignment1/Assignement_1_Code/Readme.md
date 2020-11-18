@@ -4,7 +4,7 @@
 pumasim is a simulator for robot arm.
 But it is **not open source**.You can only get the license from the owner.
 
-I am not the owner. If you want to use it, please make a contact with TU BRLIN ROBOTICS.
+I am not the owner. If you want to use it, please make a contact with TU BERLIN ROBOTICS.
    
 *****************************
    
