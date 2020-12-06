@@ -405,24 +405,65 @@ void proj2Control(GlobalVariables& gv)
    double angle=ang_vel*t;
     
     
-   gv.xd[0]=0.45+0.20*sin(angle);
-   gv.xd[1]=0.60+0.20*cos(angle);
+   gv.xd[0]=0.60+0.20*cos(angle);
+   gv.xd[1]=0.35+0.20*sin(angle);
    gv.xd[2]=0.0;
     
-   gv.dxd[0]=0.20*cos(angle)*ang_vel;
-   gv.dxd[1]= -0.20*sin(angle)*ang_vel;
+   gv.dxd[0]=-0.20*sin(angle)*ang_vel;
+   gv.dxd[1]=0.20*cos(angle)*ang_vel;
    gv.dxd[2]=0.0;
 
    force=gv.kp*(gv.xd-gv.x)+gv.kv*(gv.dxd-gv.dx);    
    gv.tau=gv.Jtranspose*force-gv.G;
    
    
-   // Remove this line when you implement proj2Control
 }
 
 void proj3Control(GlobalVariables& gv) 
 {
-   floatControl(gv);  // Remove this line when you implement proj3Control
+   PrVector3 force = PrVector3(0,0,0);
+   double t_init;
+   double ang_vel;
+   double t=gv.curTime-t_init;
+   double angle=ang_vel*t;
+
+   if(t<=5)
+   {
+        
+      angle=0.5*(2*3.14/25.0)*pow(t,2);
+      ang_vel=(2*3.14/25.0)*(t);
+   }
+   else if(t<=15)
+        
+   {
+      angle=3.14+(2*3.14/5.0)*(t-5);
+      ang_vel=2*3.14/5.0;
+   }
+   else if(t<=20)
+   {
+      angle=3.14*(5+0.4*(t-15)-0.04*pow(t-15,2));
+      ang_vel=0.4*3.14*(1-0.2*(t-15));
+   }
+    
+   if (t>20)
+   {
+      floatControl(gv);
+   }
+   else
+   {
+        
+      gv.xd[0]=0.60+0.20*cos(angle);
+      gv.xd[1]=0.35+0.20*sin(angle);
+      gv.xd[2]=0.0;
+    
+      gv.dxd[0]=-0.20*sin(angle)*ang_vel;
+      gv.dxd[1]=0.20*cos(angle)*ang_vel;
+      gv.dxd[2]=0.0;
+        
+      force=gv.kp*(gv.xd-gv.x)+gv.kv*(gv.dxd-gv.dx);   
+      gv.tau=gv.Jtranspose*force-gv.G;
+        
+   }
 }
 
 // *******************************************************************
