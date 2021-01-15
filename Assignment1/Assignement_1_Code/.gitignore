@@ -1,8 +1,0 @@
-#files to be ignored 
-build/
-
-#dont ignore these files:
-
-# if this line doesnt work
-#           manualy set tracking: git add -f build/gains_1.txt
-!build/gains_1.txt
