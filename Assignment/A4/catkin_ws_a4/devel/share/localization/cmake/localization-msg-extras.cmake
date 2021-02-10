@@ -1,0 +1,2 @@
+set(localization_MESSAGE_FILES "/home/jingsheng/robotics/Robotics/Assignment/A4/catkin_ws_a4/src/localization/msg/PoseWithWeight.msg;/home/jingsheng/robotics/Robotics/Assignment/A4/catkin_ws_a4/src/localization/msg/PoseWithWeightArray.msg;/home/jingsheng/robotics/Robotics/Assignment/A4/catkin_ws_a4/src/localization/msg/PoseWithWeightStamped.msg")
+set(localization_SERVICE_FILES "/home/jingsheng/robotics/Robotics/Assignment/A4/catkin_ws_a4/src/localization/srv/SetInitialPose.srv")

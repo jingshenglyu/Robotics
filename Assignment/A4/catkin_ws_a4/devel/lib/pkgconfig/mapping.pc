@@ -1,0 +1,8 @@
+prefix=/home/jingsheng/robotics/Robotics/Assignment/A4/catkin_ws_a4/devel
+
+Name: mapping
+Description: Description of mapping
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: sensor_msgs nav_msgs

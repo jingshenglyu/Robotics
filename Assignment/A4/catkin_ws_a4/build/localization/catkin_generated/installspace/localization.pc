@@ -1,0 +1,8 @@
+prefix=/home/jingsheng/robotics/Robotics/Assignment/A4/catkin_ws_a4/install
+
+Name: localization
+Description: Description of localization
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: message_runtime sensor_msgs nav_msgs

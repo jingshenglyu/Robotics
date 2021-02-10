@@ -1,0 +1,8 @@
+prefix=/home/jingsheng/robotics/Robotics/Assignment/A4/catkin_ws_a4/devel
+
+Name: rbo_create
+Description: Description of rbo_create
+Version: 1.0.0
+Cflags: -I/home/jingsheng/robotics/Robotics/Assignment/A4/catkin_ws_a4/devel/include
+Libs: -L${prefix}/lib 
+Requires: roscpp rospy geometry_msgs tf nav_msgs
