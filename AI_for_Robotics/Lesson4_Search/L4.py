@@ -2,7 +2,7 @@
 Author: Jingsheng Lyu
 Date: 2021-02-09 22:13:08
 LastEditors: Jingsheng Lyu
-LastEditTime: 2021-02-09 22:13:08
+LastEditTime: 2021-02-09 23:20:06
 FilePath: /Robotics/AI_for_Robotics/Lesson4_Search/L4.py
 Github: https://github.com/jingshenglyu
 Web: https://jingshenglyu.github.io/
@@ -43,8 +43,26 @@ delta = [[-1, 0], # go up
 delta_name = ['^', '<', 'v', '>']
 
 def search(grid,init,goal,cost):
-    # ----------------------------------------
-    # insert code here
-    # ----------------------------------------
+
+    # open list elements are of the type: [g, x, y]
+    
+
+
 
     return path
+
+
+##### Do Not Modify ######
+
+import grader
+
+try:
+    response = grader.run_grader(search)
+    print(response)    
+    
+except Exception as err:
+    print(str(err))
+
+##### SOLUTION: Run this cell to watch the solution video ######
+# from IPython.display import HTML
+# HTML('<iframe width="560" height="315" src="https://www.youtube.com/embed/cl8Kdkr4Gbg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>')
