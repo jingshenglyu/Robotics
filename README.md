@@ -2,13 +2,12 @@
  * @Author: Jingsheng Lyu
  * @Date: 2021-01-15 10:59:13
  * @LastEditors: Jingsheng Lyu
- * @LastEditTime: 2021-02-11 23:06:47
- * @FilePath: /Robotics/README.md
+ * @LastEditTime: 2021-02-18 22:23:30
+ * @FilePath: /robotics/Robotics/README.md
  * @Github: https://github.com/jingshenglyu
  * @Web: https://jingshenglyu.github.io/
  * @E-Mail: jingshenglyu@gmail.com
 --> 
-
 # Robotics
 A Robotics course of TU Berlin WiSe20/21
 
